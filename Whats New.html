@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's New with Braid Royale</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+            padding: 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+            position: relative;
+            padding-bottom: 100px; /* Adds space to prevent footer overlap */
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #b76e79; /* Dark Rose Gold */
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .content img {
+            width: 300px;
+            height: 300px;
+            border: 5px solid #d28a8b; /* Darker Light Rose border for images */
+            object-fit: cover;
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.5;
+        }
+
+        ul {
+            margin-top: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+
+        ul li {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 10px;
+            list-style: none;
+        }
+
+        ul li::before {
+            content: "★"; /* Unique pointer symbol */
+            margin-right: 10px;
+            color: #d28a8b; /* Darker Light Rose */
+        }
+
+        a.back-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #b76e79; /* Dark Rose Gold */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1rem;
+        }
+
+        a.back-link:hover {
+            background-color: #e09e9c; /* Darker Blush Pink on hover */
+        }
+
+        video {
+            width: 400px;
+            height: 400px;
+            margin: 20px auto;
+            border: 5px solid #d28a8b; /* Video border matches image borders */
+        }
+
+        /* Logo in the top-left corner */
+        .logo {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 100px; /* Adjust the size of the logo */
+        }
+
+        footer {
+            background-color: #a36b6b;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0; /* Ensures footer spans the full width of the page */
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-links {
+            margin-top: 5px;
+        }
+
+        .footer-links p {
+            margin: 2px 0;
+        }
+
+        /* Custom scrollbar styles */
+        /* Webkit browsers (Chrome, Safari, Edge) */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #b76e79; /* Dark Rose Gold */
+            border-radius: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: #f1f1f1;
+        }
+
+        /* Firefox */
+        body {
+            scrollbar-color: #b76e79 #f1f1f1;
+            scrollbar-width: thin;
+        }
+    </style>
+</head>
+<body>
+    <!-- Business Logo -->
+    <img src="/Users/coleenwilliams/Desktop/BraidRoyale/Images/logo.jpeg" alt="Braid Royale Logo" class="logo">
+
+    <a class="back-link" href="BraidRoyale.html">Back to Home</a>
+
+    <h2>What's New with Braid Royale</h2>
+
+    <!-- Video Section - Autoplay, Loop, and Mute -->
+    <video autoplay loop muted>
+        <source src="/Users/coleenwilliams/Desktop/BraidRoyale/Images/BRvideo3.MP4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="content">
+        <img src="images/IMG2.jpeg" alt="New Feature Image 1">
+        <img src="images/IMG14.jpeg" alt="New Feature Image 2">
+        <img src="images/IMG15.jpeg" alt="New Feature Image 3">   
+    </div>
+
+    <p>
+        BraidRoyale recently introduced the new trending knotless braids with curls. What makes our style unique is the use of human hair that will be provided. We selectively choose high-quality human hair to give you that chic look.
+    </p>
+    <ul>
+        <li>It is light weight</li>
+        <li>Reusable for future appointments with Braid Royale</li>
+        <li>Knotless and easy to style in one or other desirable hairstyles</li>
+        <li>Enduring 100% Human hair quality</li>
+        <li>Easy to rejuvenate with water and mousse</li>
+        <li>Perfect for any occasion, from casual to formal</li>
+        <li>Customizable length and curl pattern</li>
+    </ul>
+
+    <footer>
+        <div class="footer-links">
+            <p>Contact Us: 1(868) 360-1413</p>
+            <p>&copy; 2024 Braid Royale. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

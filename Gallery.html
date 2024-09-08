@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Braid Royale Gallery</title>
+
+    <!-- Font Awesome for Social Media Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+            padding: 20px;
+            background: linear-gradient(to bottom right, #f5f5dc, #eae0c8);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #b2955b; /* Color for H1 and footer */
+            font-family: Georgia, serif;
+        }
+
+        .banner {
+            background: rgba(245, 245, 220, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        a.back-link {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #b2955b; /* Same color as footer */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        a.back-link:hover {
+            background-color: #eae0c8;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .gallery-item {
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .gallery img {
+            width: 300px; /* Set a fixed width */
+            height: 300px; /* Set a fixed height */
+            object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
+            border: 2px solid #b2955b; /* Border color */
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-description {
+            margin-top: 10px;
+            color: #555;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            text-align: center;
+        }
+
+        .modal-content {
+            position: relative;
+            display: inline-block;
+            margin: 10% auto;
+            width: 80%;
+            max-width: 900px;
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 16px;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #b2955b; /* Same as H1 and back-link button */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            border-top: 2px solid #b2955b; /* Optional border at the top */
+        }
+
+        .social-media {
+            margin-bottom: 10px;
+        }
+
+        .social-media a {
+            margin: 0 10px;
+            color: white;
+            font-size: 24px; /* Icon size */
+            transition: color 0.3s ease;
+        }
+
+        .social-media a:hover {
+            color: #eae0c8; /* Lightened color on hover */
+        }
+
+        .footer-links p {
+            margin: 5px 0;
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 12px; /* Adjust scrollbar width if needed */
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f5f5dc; /* Track color */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #b2955b; /* Scrollbar color */
+            border-radius: 10px; /* Optional: rounded corners for the scrollbar thumb */
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #eae0c8; /* Color on hover */
+        }
+
+        html {
+            scrollbar-width: thin; /* Adjust width if needed */
+            scrollbar-color: #b2955b #f5f5dc; /* Scrollbar color and track color */
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <h1>Our Gallery</h1>
+        <a class="back-link" href="/Users/coleenwilliams/Desktop/BraidRoyale/BraidRoyale.html">Back to Home</a>
+    </div>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="/Users/coleenwilliams/Desktop/BraidRoyale/Images/IMG2.jpeg" alt="Gallery Image 1">
+            <div class="gallery-description">Human Hair Boho Braids (New Style) - $1600 - 5 hours</div>
+        </div>
+        <div class="gallery-item">
+            <img src="/Users/coleenwilliams/Desktop/BraidRoyale/Images/IMG4.jpeg" alt="Gallery Image 2">
+            <div class="gallery-description">Butterfly locs - $600 - 3 hours</div>
+        </div>
+        <div class="gallery-item">
+            <img src="/Users/coleenwilliams/Desktop/BraidRoyale/Images/IMG6.jpeg" alt="Gallery Image 3">
+            <div class="gallery-description">Traditional Box Braids - $800 - 5 hours</div>
+        </div>
+        <div class="gallery-item">
+            <img src="/Users/coleenwilliams/Desktop/BraidRoyale/Images/IMG7.jpeg" alt="Gallery Image 4">
+            <div class="gallery-description">Soft Locs - $750 - 4.5 hours</div>
+        </div>
+        <div class="gallery-item">
+            <img src="/Users/coleenwilliams/Desktop/BraidRoyale/Images/IMG8.jpeg" alt="Gallery Image 5">
+            <div class="gallery-description">Knotless Box Braids - $750 - 4.5 hours</div>
+        </div>
+        <div class="gallery-item">
+            <img src="/Users/coleenwilliams/Desktop/BraidRoyale/Images/IMG9.jpeg" alt="Gallery Image 6">
+            <div class="gallery-description">Cornrow and Box Braids - $650 - 4 hours</div>
+        </div>
+        <div class="gallery-item">
+            <img src="/Users/coleenwilliams/Desktop/BraidRoyale/Images/IMG10.jpeg" alt="Gallery Image 7">
+            <div class="gallery-description">Kids - $250-$400 - 3 hours</div>
+        </div>
+        <div class="gallery-item">
+            <img src="/Users/coleenwilliams/Desktop/BraidRoyale/Images/IMG11.jpeg" alt="Gallery Image 8">
+            <div class="gallery-description">Full length Ombre Soft Locs - $900 - 5 hours</div>
+        </div>
+    </div>
+
+    <!-- Modal for enlarged images -->
+    <div class="modal" id="imageModal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+        <span class="next" onclick="changeImage(1)">&#10095;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="">
+        </div>
+    </div>
+
+    <!-- Footer with Social Media Icons -->
+    <footer>
+        <div class="social-media">
+            <a href="https://wa.me/18683601413" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://tiktok.com/@yourprofile" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <div class="footer-links">
+            <p>Contact Us: 1(868) 360-1413</p>
+            <p>&copy; 2024 Braid Royale TT. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const images = document.querySelectorAll('.gallery img');
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        let currentIndex = 0;
+
+        images.forEach((img, index) => {
+            img.addEventListener('click', () => {
+                currentIndex = index;
+                openModal(img.src);
+            });
+        });
+
+        function openModal(src) {
+            modal.style.display = 'block';
+            modalImage.src = src;
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+
+        function changeImage(direction) {
+            currentIndex = (currentIndex + direction + images.length) % images.length;
+            modalImage.src = images[currentIndex].src;
+        }
+    </script>
+</body>
+</html>
